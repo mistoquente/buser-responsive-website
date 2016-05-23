@@ -1,3 +1,7 @@
+.logo {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
 .site {
     width: 100%;
     font-size: 1.6em;
@@ -10,7 +14,7 @@
     display: table;
 }
 
-.conteudo {
+.content-default {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
