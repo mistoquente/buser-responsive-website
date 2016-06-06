@@ -19,9 +19,9 @@ h2 {
 }
 
 p {
-    font-size: 1.6em;
+    font-size: 1.4em;
     color: #fff;
-    line-height: 1.6em;
+    line-height: 1.4em;
 }
 a {
 	text-decoration: none;
@@ -55,7 +55,7 @@ a {
 
 .content-default {
     width: 100%;
-    max-width: 1280px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 2em;
     display: inherit;
