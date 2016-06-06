@@ -1,5 +1,37 @@
-.logo {
+* {
+	box-sizing: border-box;
+}
+body{
+    font-size: 62.5%; 	
+	transition: .5s;
 	font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+
+}
+
+h2 {
+	font-size: 3em;
+	font-weight: bold;
+	color: #fff;
+}
+
+p {
+    font-size: 1.6em;
+    color: #fff;
+    line-height: 1.6em;
+}
+a {
+	text-decoration: none;
+	transition: .2s;
+}
+
+
+
+.logo {
+	
 	font-size: 3em;
 	color: #fff;
 	text-transform: uppercase;
@@ -15,9 +47,10 @@
 
 .box-full {
     width: 100%;
-    padding: 45px 0;
+    padding: 4.5em 0;
     margin: 0 auto;
     display: table;
+    position: relative;
 }
 
 .content-default {
@@ -25,8 +58,8 @@
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 2em;
-    box-sizing: border-box;
     display: inherit;
+    position: relative;
 }
 
 /* menu */
@@ -77,6 +110,7 @@ nav ul li a:hover{
 	}*/
 	nav {
 		float: none;
+		display: none;
 		
 	}
 	/*nav ul {

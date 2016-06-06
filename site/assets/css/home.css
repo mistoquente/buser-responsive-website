@@ -1,6 +1,121 @@
-.introduction {
+.header {
 	background: #00acc1;
 }
+
+/*intro*/
+.introduction {
+	background: #00acc1;
+	height: 465px;
+	padding-top: 0;
+}
+.introduction .content-default {
+	text-align: center;
+}
+.bus {
+    width: 231px;
+    margin: 0 auto;
+    height: 99px;
+    display: block;
+    background: url(../images/bus.png);
+    z-index: 2;
+    position: relative;
+}
+.introduction p {
+	font-weight: 300;
+	padding: 0 4em;
+}
+.introduction h2 {
+	margin-bottom: 1.5em;
+}
+
+/*intro*/
+
+
+.title-black {
+	color: #000;
+	text-align: center;
+	margin: 1em 0 2em 0;
+}
+
+.other-services .icon {
+	width: 100px;
+	height: 100px;
+	float: left;
+	display: block;
+	margin-right: 2em;
+	background: url(../images/icons-other-services.png);
+}
+.icon.traffic {
+	background-position: 0px 0px;
+}
+.icon.favorite {
+	background-position: 0px -205px;	
+}
+.icon.precision {
+	background-position: 0px -102px;
+}
+.icon.gps {
+	background-position: 0px -308px;
+}
+
+.list-other-services {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.list-other-services div {
+	display: inline-block;
+	padding: 0 2em;
+}
+
+.list-other-services li {
+    margin-bottom: 2em;
+    display: inline-block;
+}
+
+.list-other-services p{
+	width: initial;
+    margin: initial;
+    color: #000;
+    position: relative;
+    top: .5em;
+}
+
+
+
+
+
+.first-word {
+		color: #00acc1;
+}
+
+.btn {
+	background: #ffd740;
+    color: #000;
+    font-size: 1.6em;
+    position: relative;
+    padding: .6em 1.2em;
+    z-index: 2;
+    border-radius: .3em;
+    top: 4em;
+}
+.btn:hover {
+	background: #ddb82d;
+}
+
+
+
+p {
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    margin-top: 4em;
+}
+
+
+
+
+
 .how-to {
 	background: #ffffff;
 }
@@ -16,6 +131,48 @@
 .contact {
 	background: #00838f;
 }
+
+
+
+
+/* SOMENTE MOBILE */
+@media (max-width: 480px) { 	
+}
+/* SOMENTE MOBILE */
+
+/* SOMENTE TABLET */
+@media (min-width: 481px) and (max-width: 1023px) {	
+}
+/* SOMENTE TABLET */
+
+/* TABLET e MOBILE */
+@media (max-width: 1023px) {
+	.other-services .icon {
+	    margin: 0 auto;
+	    float: none;
+	}
+
+	.list-other-services div {
+		padding: 0 2em;
+	}
+	.list-other-services p {
+		text-align: center;
+	}
+}
+/* TABLET e MOBILE */
+
+/* TABLET e DESK */
+@media (min-width: 481px) {    
+}
+/* TABLET e DESK */
+
+/* SOMENTE DESK */
+@media (min-width: 1024px) {
+}
+/* SOMENTE DESK */
+
+
+
 
 
 
