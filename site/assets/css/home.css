@@ -99,8 +99,10 @@
 
 /*app information*/
 .app-information {
-    background: #00acc1 url(../images/computer.png) right 10px no-repeat;
-    background-size: contain;
+    background: #00acc1;
+    overflow: hidden;
+    padding: 12em 0;
+    /* background-size: contain; */
 }
 .app-information h2 {
     color: #000;
