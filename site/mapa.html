@@ -254,6 +254,13 @@
               strokeWeight: 4
           });
 
+          var image = 'http://olhovivo.sptrans.com.br/Content/theme/imagens/icones/bus1.png';
+          var beachMarker = new google.maps.Marker({
+              position: {lng: -46.801338, lat: -23.4174378},
+              map: map,
+              icon: image
+          });
+
           flightPath.setMap(map);
           zoomToObject(flightPath);
 
