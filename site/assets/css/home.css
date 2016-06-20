@@ -1,4 +1,21 @@
 
+::-webkit-input-placeholder {
+   color: #40b0bc;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #40b0bc;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #40b0bc;  
+}
+
+:-ms-input-placeholder {  
+   color: #40b0bc;  
+}
+
+
 
 .header {
 	background: #00acc1;
@@ -326,8 +343,52 @@
 .contact {
 	background: #00838f;
 }
+.contact h2 {
+  color: #59c2ce;
+  font-weight: normal;
+  margin-bottom: 1em;
+}
 
+.contact h2 span {
+  color: #fff;
+}
+.input-email {
+  border: 1px #40b0bc solid;
+  color: #40b0bc;
+  padding: .5em;
+  background: transparent;
+  outline: none;
+  float: left;
+}
 
+.button-email {
+    background: #00acc1 url(../images/button-email.png) no-repeat;
+    border: none;
+    width: 57px;
+    height: 35px;
+    outline: none;
+}
+
+.button-email:focus {
+    border: none;    
+    outline: none;
+}
+
+.button-email:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+.contact p {
+    text-align: center;    
+    padding: 0 15em;
+    margin-bottom: 2em;
+}
+.contact div {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    max-width: 241px;    
+}
 /*.img-note:before {
   content: " ";
   width: 511px;
@@ -338,6 +399,25 @@
   right: -22%;  
 }*/
 
+
+.footer {
+  background: #fff;
+  padding: 2em 0;
+}
+
+.footer .content-default{
+  max-width: 1280px;
+}
+.footer .logo,
+.footer nav ul li a {
+  color: #000;
+}
+
+
+.footer h2 {
+    font-size: inherit;
+    text-align: center;
+}
 
 /* SOMENTE MOBILE */
 @media (max-width: 480px) { 	
@@ -373,9 +453,12 @@
   }
 
   .app-information {
-      
-      padding: 4.5em 0;
-      
+      background-image: none;
+      padding: 4.5em 0;      
+  }
+
+  .footer nav {
+    display: none;
   }
 
       
