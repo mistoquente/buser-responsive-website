@@ -57,7 +57,7 @@
               zoom: 13
           });
 
-          var flightPlanCoordinates = [
+          var busLines = [
               {lat: -23.432530, lng: -46.787073},
               {lat: -23.432481, lng: -46.787081},
               {lat: -23.431505, lng: -46.787190},
@@ -244,8 +244,8 @@
               {lat: -23.432530, lng: -46.787073}
 
           ];
-          var flightPath = new google.maps.Polyline({
-              path: flightPlanCoordinates,
+          var busLinePoints = new google.maps.Polyline({
+              path: busLines,
               geodesic: true,
               strokeColor: '#FF0000',
               strokeOpacity: 2.0,
@@ -258,9 +258,9 @@
               map: map,
               icon: image
           });
-  
-          flightPath.setMap(map);
-          zoomToObject(flightPath);
+
+          busLinePoints.setMap(map);
+          zoomToObject(busLinePoints);
 
           /**
            * Set map center
