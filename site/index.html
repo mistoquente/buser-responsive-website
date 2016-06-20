@@ -9,24 +9,10 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/grid.css" media="all" />
 		<link rel="stylesheet" type="text/css" href="assets/css/global.css" media="all" />
 		<link rel="stylesheet" type="text/css" href="assets/css/home.css" media="all" />		
-		
 		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
-		<style>
-		.img-note:before {
-		    content: " ";
-		    width: 511px;
-		    top: -26%;
-		    height: 634px;
-		    background: url(assets/images/computer.png) no-repeat;
-		    position: absolute;
-		    right: -22%;
-		    /* zoom: .7; */
-		}
-		</style>
 	</head>
 	<body>
 	<section class="col-desk-12">
-	
 		<section class="box-full header" name="enzolindo">
 			<header>
 			<div class="content-default">
@@ -36,7 +22,7 @@
 				<div class="col-desk-11">
 					<nav>
 						<a id="nav-toggle" class="menu-drop" href="#" onclick="return false"></a>
-						<ul>
+						<ul id="menu">
 							<li>
 								<a href="#">Como funciona</a>
 							</li>
@@ -64,21 +50,11 @@
 				<p>Tenha controle do seu tempo e utilize o ônibus de forma programada para seguir viagem até o trabalho, faculdade ou escola. Programe-se de forma fácil e chegue ao seu destino no momento certo.</p>
 				<a href="#" class="btn">Veja mais</a>
 			</section>
-			<div style="
-   position: absolute;
-   bottom: 0px;
-   width: 100%;
-   left: 0;
-">
-				<svg height="300" width="100%" style="
-    
-    /* width: 50%; */
-    margin: 0 auto;
-    position: relative;
-">
-  <ellipse cx="50%" cy="200%" rx="70%" ry="200%" style="fill:#00838f"></ellipse>
-</svg>
-				</div>
+			<div style="position: absolute;bottom: 0px;width: 100%;left: 0;">
+				<svg height="300" width="100%" style="margin: 0 auto;position: relative;">
+  					<ellipse cx="50%" cy="200%" rx="70%" ry="200%" style="fill:#00838f"></ellipse>
+				</svg>
+			</div>
 		</section>
 		
 		<section class="box-full how-to">
@@ -90,26 +66,40 @@
 		<span class="target-fix" id="tabB"></span>
 		<span class="target-fix" id="tabA"></span>
 
-		<a class="tab-link" href="#tabA">Tab 1</a>
-		<a class="tab-link" href="#tabB">Tab 2</a>
-		<a class="tab-link" href="#tabC">Tab 3</a>
+		<a class="tab-link" href="#tabA">
+			<span class="tab-title">
+				<span class="number">1. </span> 
+				<span>Preparou</span>
+			</span>
+			<span class="text-tab">É preparar o seu Tang. É bolar um plano para melhorar o planeta, e juntar os amigos para fazer.</span>
+		</a>
+		<a class="tab-link" href="#tabB">
+			<span class="tab-title">
+				<span class="number">2. </span> 
+				<span>Bebeu</span>
+			</span>
+			<span class="text-tab">É tomar um gole de seu Tang preferido, um gole que dá força pra você e a turma toda. Só assim para encarar os desafios. </span>
+		</a>
+		<a class="tab-link" href="#tabC">
+			<span class="tab-title">
+				<span class="number">3. </span> 
+				<span>Faz</span>
+			</span>
+			<span class="text-tab">Você preparou, você bebeu, você faz. É uma mistura de Tang, amigos e idéias simples. Idéias para fazer um planeta melhor.</span>
+		</a>
 
 		<article class="tab">
-			<h3>:target is the most common selector for odd css demos. However you get a jump when you click an anchor, I've fixed that here.</h3>
+			<h3>Versão tab 1</h3>
+			<img src="assets/images/versoes-buser.png" alt="Versões buser">
 		</article>
 		<article class="tab">
-			<h3>Tab 2</h3>
-			<p>Lorem Ipsum Dolor Sit</p>
+			<h3>Versão tab 2</h3>
+			<img src="assets/images/versoes-buser.png" alt="Versões buser">
 		</article>
 		<article class="tab">
-			<h3>Tab 3</h3>
-			<p>Lorem Ipsum Dolor Sit</p>
+			<h3>Versão tab 3</h3>
+			<img src="assets/images/versoes-buser.png" alt="Versões buser">
 		</article>
-
-		<h2 class="title">Target Tabs</h2>
-		<p><strong>Non-Independent, Default Selected</strong></p>
-		<p>Works In: Chrome(latest), Opera(Latest), FireFox(Latest), IE9</p>
-
 	</section>
 			</section>
 		</section>
@@ -166,19 +156,13 @@
 						&nbsp;
 					</div>
 				</div>
-
-
 			</section>
-			<!--<img src="assets/images/computer.png" alt="">-->
 		</section>
 		
 		<section class="box-full contact">
 			<section class="content-default"></section>
 		</section>
-		
-
-
-
 	</section>
+	<script src="assets/js/buser.js"></script>
 	</body>
 </html>

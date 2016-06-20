@@ -102,6 +102,10 @@ nav ul li a:hover{
 
 /* TABLET e MOBILE */
 @media (max-width: 1023px) {
+
+	#menu {
+		display: none;
+	}
 	h1 {		
 		margin-bottom: 5em;
 	}	
@@ -110,8 +114,6 @@ nav ul li a:hover{
 	}*/
 	nav {
 		float: none;
-		display: none;
-		
 	}
 	/*nav ul {
 		display: none;
@@ -146,6 +148,10 @@ nav ul li a:hover{
 	}
 	nav ul li:last-child a{
 		padding-right: 0;
+	}
+
+	body #menu {
+		display: block !important ;
 	}
 }
 /* SOMENTE DESK */
