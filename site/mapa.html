@@ -34,7 +34,7 @@
         </div>
       </header>
       <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Title</span>
+        <span class="mdl-layout-title">Buser</span>
         <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="">Buser</a>
           <a class="mdl-navigation__link" href="">Login</a>
@@ -248,13 +248,25 @@
               path: busLines,
               geodesic: true,
               strokeColor: '#FF0000',
-              strokeOpacity: 2.0,
+              strokeOpacity: 0.7,
               strokeWeight: 4
           });
 
-          var image = 'assets/images/icon-bus.png';
-          var busMaker = new google.maps.Marker({
+          var image = 'assets/images/icon-bus-big-8.png';
+          var busMaker1 = new google.maps.Marker({
               position: {lng: -46.801338, lat: -23.4174378},
+              map: map,
+              icon: image
+          });
+
+          var busMaker2 = new google.maps.Marker({
+              position: {lat: -23.434131, lng: -46.786973},
+              map: map,
+              icon: image
+          });
+
+          var busMaker3 = new google.maps.Marker({
+              position: {lat: -23.410877, lng: -46.812195},
               map: map,
               icon: image
           });
