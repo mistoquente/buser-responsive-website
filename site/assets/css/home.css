@@ -99,7 +99,7 @@
 
 /*app information*/
 .app-information {
-    background: #00acc1;
+    background: #00acc1 url(../images/computer.png) no-repeat right 17px;
     overflow: hidden;
     padding: 12em 0;
     /* background-size: contain; */
@@ -253,7 +253,10 @@
   color: #666;
 }
 
-
+.tab img {
+    width: 497px;
+    max-width: 100%;
+}
 
 
 
@@ -325,16 +328,15 @@
 }
 
 
-.img-note:before {
+/*.img-note:before {
   content: " ";
   width: 511px;
   top: -26%;
   height: 634px;
   background: url(../images/computer.png) no-repeat;
   position: absolute;
-  right: -22%;
-  /* zoom: .7; */
-}
+  right: -22%;  
+}*/
 
 
 /* SOMENTE MOBILE */
@@ -360,6 +362,23 @@
 	.list-other-services p {
 		text-align: center;
 	}
+
+  .list-other-services li {
+      text-align: center;
+      margin-bottom: 6em;
+  }
+
+  .img-note:before {
+      display: none;
+  }
+
+  .app-information {
+      
+      padding: 4.5em 0;
+      
+  }
+
+      
 }
 /* TABLET e MOBILE */
 
