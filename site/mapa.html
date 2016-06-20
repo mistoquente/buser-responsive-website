@@ -14,6 +14,18 @@
     top: 0;
     left: 0;
   }
+
+  body .mdl-layout__drawer {
+    left: inherit;
+    right: 0;
+    -webkit-transform: translateX(250px);
+    transform: translateX(250px);    
+  }
+
+  body .mdl-layout__drawer-button{
+    right: 0;
+    left: initial;
+  }
   </style>
   </head>
   <body>
@@ -22,22 +34,17 @@
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
           <!-- Title -->
-          <span class="mdl-layout-title">Title</span>
+          <span class="mdl-layout-title">Buser</span>
           <!-- Add spacer, to align navigation to the right -->
-          <div class="mdl-layout-spacer"></div>
+          
           <!-- Navigation. We hide it in small screens. -->
-          <nav class="mdl-navigation mdl-layout--large-screen-only">
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-          </nav>
+          
         </div>
       </header>
       <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Title</span>
         <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">buser</a>
           <a class="mdl-navigation__link" href="">Link</a>
           <a class="mdl-navigation__link" href="">Link</a>
           <a class="mdl-navigation__link" href="">Link</a>
