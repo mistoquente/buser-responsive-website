@@ -224,43 +224,44 @@
   display: none !important;
 }
 
+.tab-link:nth-of-type(2) {
+    margin: 0 2%;
+}
+
 .tab-link {
-  text-transform: uppercase;
-  font-size: 10px;
+  font-size: 1.6em;
   cursor: pointer;
   color: #555;
   font-weight: bold;
   text-decoration: none;
   display: block;
   float: left;
-  width: 55px;
-  padding: 5px 0;
-  text-align: center;
-  background: #ccc;
-  border: 1px solid #bbb;
-  border-left: 0;
-  border-bottom: 0;
+  width: 32%;
+  padding: 15px 25px 15px 25px;
+  border-top: 10px solid #FFD740;
+  opacity: .3;
+  transition: .5s;
+}
+
+.text-tab {
+  font-weight: 100;
+  line-height: 1.4em;
 }
 
 .tab-link:hover {
-  background: #eee;
-}
-
-.tab-link:nth-of-type(1) {
-  border-left: 1px solid #bbb;
-}
-
-.tab-link:hover {
+  opacity: 1;
   color: #666;
 }
 
+
+
+
+
 .tab {
   clear: both;
-  background: #ddd;
+  text-align: center;
   padding: 25px;
   display: none;
-  height: 180px;
-  border: 1px solid #bbb;
 }
 
 .target-fix {
@@ -277,7 +278,8 @@
 #tab-C:checked ~ label:nth-of-type(3),
 #tab-B:checked ~ label:nth-of-type(2),
 #tab-B:not(:checked) ~ #tab-C:not(:checked) ~ label:nth-of-type(1) {
-  background: #ddd;
+  
+  opacity: 1;
 }
 
 .tabs-focus .tab-link:focus:after,
@@ -294,7 +296,20 @@
   width: 55px;
   height: 1px;
   display: block;
-  background: #ddd;
+}
+
+.tab-title {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.tab-title span {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.tab-area .number {
+  color: #00838F;
 }
 
 
@@ -310,6 +325,16 @@
 }
 
 
+.img-note:before {
+  content: " ";
+  width: 511px;
+  top: -26%;
+  height: 634px;
+  background: url(../images/computer.png) no-repeat;
+  position: absolute;
+  right: -22%;
+  /* zoom: .7; */
+}
 
 
 /* SOMENTE MOBILE */
