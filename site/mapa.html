@@ -57,6 +57,30 @@
               zoom: 13
           });
 
+          var styles = [
+              {
+                  stylers: [
+                      { hue: "#00ffe6" },
+                      { saturation: -20 }
+                  ]
+              },{
+                  featureType: "road",
+                  elementType: "geometry",
+                  stylers: [
+                      { lightness: 100 },
+                      { visibility: "simplified" }
+                  ]
+              },{
+                  featureType: "road",
+                  elementType: "labels",
+                  stylers: [
+                      { visibility: "off" }
+                  ]
+              }
+          ];
+
+          map.setOptions({styles: styles});
+
           var busLines = [
               {lat: -23.432530, lng: -46.787073},
               {lat: -23.432481, lng: -46.787081},
@@ -247,7 +271,7 @@
           var busLinePoints = new google.maps.Polyline({
               path: busLines,
               geodesic: true,
-              strokeColor: '#FF0000',
+              strokeColor: '#F79239',
               strokeOpacity: 0.7,
               strokeWeight: 4
           });
