@@ -1,0 +1,91 @@
+
+
+ <div class="m-modal">
+    <div class="table">
+        <div class="tr">
+            <div class="td">
+                <div class="modal-content">
+
+                <header class="form-signup" ng-controller="homeController as vm" ng-init="vm.acessar = true">
+                
+                	<ul>
+                		<li><a href="#" ng-click="vm.viewBoxAcessar()">Acessar</a></li>
+                		<li><a href="#" ng-click="vm.viewBoxCadastrar()">Cadastrar</a></li>
+                	</ul>
+        
+                    <div class="acessar" ng-show="vm.acessar">
+                        <form name="projectForm">
+                        <p ng-show="vm.messageError" class="messageError">E-mail ou senha inválidos</p>
+                            <div layout="row">
+                                <md-input-container flex="100">
+                                    <label class="text-label">Email</label>
+                                    <input type="email" required="" name="email" ng-model="vm.userEmail">
+                                    <div ng-messages="projectForm.email.$error">
+                                        <div ng-message="required">Campo obrigatório.</div>
+                                        <div ng-message="email">email errado.</div>
+                                    </div>
+                                </md-input-container>     
+                            </div>
+                            <div layout="row">
+                                <md-input-container flex="100">
+                                    <label class="text-label">Senha</label>
+                                    <input type="password" required="" name="senha" ng-model="vm.userSenha">
+                                    <div ng-messages="projectForm.senha.$error">
+                                        <div ng-message="required">Campo obrigatório.</div>
+                                    </div>
+                                </md-input-container>        
+                            </div>
+
+                            <div class="box-buttons">
+                                <button class="button-form">Cancelar</button> <button class="button-form" ng-click="vm.login(vm.userEmail, vm.userSenha)">Login</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div ng-show="vm.cadastrar" >
+
+                        <form name="projectForm">
+                            <div layout="row">
+                                <md-input-container flex="100">
+                                    <label class="text-label">Email</label>
+                                    <input type="email" required="" name="email" ng-model="project.email">
+                                    <div ng-messages="projectForm.email.$error">
+                                        <div ng-message="required">Campo obrigatório.</div>
+                                        <div ng-message="email">email errado.</div>
+                                    </div>
+                                </md-input-container>     
+                            </div>
+
+                            <div layout="row">
+                                <md-input-container flex="100">
+                                    <label class="text-label">Senha</label>
+                                    <input type="password" required="" name="senha" ng-model="project.senha">
+                                    <div ng-messages="projectForm.senha.$error">
+                                        <div ng-message="required">Campo obrigatório.</div>
+                                    </div>
+                                </md-input-container>        
+                            </div>
+                            <div layout="row">
+                                <md-input-container flex="100">
+                                    <label class="text-label">Repetir senha</label>
+                                    <input type="password" required="" name="repetirsenha" ng-model="project.repetirsenha">
+                                    <div ng-messages="projectForm.repetir.$error">
+                                        <div ng-message="required">Campo obrigatório.</div>
+                                    </div>
+                                </md-input-container>        
+                            </div>
+
+                            <div class="box-buttons">
+                                <button class="button-form">Cancelar</button> <button class="button-form">Cadastrar</button>
+                            </div>
+                        </form>                        
+                    </div>
+    
+                </header>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Buser</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="assets/styles/static.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+</head>
+<body >
+	<div class="mapa-static"></div>
+	<div class="bg"></div>
+	
+	<div class="container" ui-view>
+	</div>
+
+	<!-- AngularJS -->	
+	<script src="assets/scripts/angular.min.js"></script>
+
+	<!-- rotas -->
+	<script src="assets/scripts/angular-ui-router.js"></script>
+
+	<!-- modulo principal -->
+	<script src="app/modules/app.module.js"></script>
+
+	<!-- Nosso arquivo de configuracao -->
+	<script src="app/config/app.config.js"></script>
+
+	<!-- controller -->
+	<script src="app/controllers/home.controller.js"></script>
+	
+	<!-- constants -->
+	<script src="app/constants/app.constants.js"></script>
+
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    
+
+</body>
+</html>
