@@ -144,6 +144,10 @@ div.td {
     text-transform: uppercase;
 }
 
+.information-buser {
+    padding:  0 0 0 45px;
+}
+
 .user-image-link {
     padding: 30px 40px 0 40px;
 }
@@ -167,4 +171,10 @@ div.td {
 	body {
 	    font-size: 50%;
 	}
+}
+
+@media (max-width: 1024px) {
+    .information-buser {
+        padding:  0 0 0 20px;
+    }
 }
