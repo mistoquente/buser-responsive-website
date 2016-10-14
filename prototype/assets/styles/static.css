@@ -134,6 +134,33 @@ div.td {
 .layout-row md-input-container {
     margin: 9px 0;
 }
+.mdl-layout .mdl-layout__header {
+    background-color: #00acc2;
+}
+
+
+/* profile */
+.mdl-layout--fixed-header h3 {
+    text-transform: uppercase;
+}
+
+.user-image-link {
+    padding: 30px 40px 0 40px;
+}
+
+.image-user{
+    width: 35%;
+}
+
+.link-login {
+    color: #757575;
+    text-decoration: none;
+}
+
+.link-login:hover {    
+    text-decoration: underline;
+}
+/* profile */
 
 
 @media (max-width: 480px) {
