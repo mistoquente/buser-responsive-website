@@ -142,6 +142,7 @@ div.td {
 
 .mdl-layout__header .mdl-layout__drawer-button {
     color: #333 !important;
+    background: none;
 }
 
 /* profile */
@@ -169,7 +170,9 @@ div.td {
 }
 
 .image-user-right{
-    width: 100%;
+    width: 78%;
+    z-index: 6;
+    position: relative;
 }
 
 .link-login {
@@ -185,9 +188,33 @@ div.td {
 
 /* search */
 .box-search {
-    width: 96%;
+    width: 100%;
+    margin: 0 auto;    
+    position: absolute;
+    height: 44px;        
+    top: 8px;    
+}
+
+.search-bus {
+    width: 90%;
+    margin-left: 55px;
+    height: 48px;
+    font-size: 16px;
+    padding-left: 20px;
+    border: none;
+    outline: none;
+    color: #999;
+}
+
+.search-bus:focus {    
+    border: none;
+}
+
+.box-search-content {
+    width: 98%;
+    height: 48px;
     margin: 0 auto;
-    background-color: #fff;
+    background: #fff;
 }
 /* search */
 
