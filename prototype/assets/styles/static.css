@@ -170,9 +170,8 @@ div.td {
 }
 
 .image-user-right{
-    width: 78%;
-    z-index: 6;
-    position: relative;
+    width: 35px;
+    height: 35px;
 }
 
 .link-login {
@@ -216,6 +215,17 @@ div.td {
     margin: 0 auto;
     background: #fff;
 }
+
+.box-icon-user {
+    width: 4%;
+    margin-right: 25px;
+    float: right;
+    margin-top: 17px;
+    border-left: 1px #ccc solid;
+    z-index: 6;
+    position: relative;
+    padding-left: 16px;
+}
 /* search */
 
 
@@ -231,5 +241,13 @@ div.td {
     }
     .title-buser {        
         line-height: 6px;        
+    }
+    .box-search-content,
+    .search-bus {        
+        height: 40px;        
+    }
+    .image-user-right{
+        width: 25px;
+        height: 25px;
     }
 }
