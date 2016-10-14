@@ -122,9 +122,11 @@ div.td {
     font-weight: bold;
     margin: 0 10px;
 }
+
 .button-form:last-child {
     margin-right: 0;
 }
+
 .button-form:hover {
     text-decoration: underline;
 }
@@ -137,7 +139,6 @@ div.td {
 .mdl-layout .mdl-layout__header {
     background-color: #00acc2;
 }
-
 
 /* profile */
 .mdl-layout--fixed-header h3 {
