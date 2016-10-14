@@ -10,7 +10,7 @@
  }
  .container {
     position: relative;
-    z-index: 2;
+    z-index: 3;
  }
 
  .mapa-static {
@@ -141,6 +141,12 @@ div.td {
 }
 
 /* profile */
+
+.title-buser {
+    margin-left: 65px;
+    line-height: 15px;
+}
+
 .mdl-layout--fixed-header h3 {
     text-transform: uppercase;
 }
@@ -166,6 +172,15 @@ div.td {
     text-decoration: underline;
 }
 /* profile */
+
+
+/* search */
+.box-search {
+    margin-top: 100px;
+    background: #fff;
+
+}
+/* search */
 
 
 @media (max-width: 480px) {
