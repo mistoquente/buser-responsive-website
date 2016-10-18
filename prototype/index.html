@@ -17,68 +17,93 @@
 	<div class="mapa-static"></div>
 	<div class="bg"></div>
 
+	 	<style> 	
+	#gmaps {
+		position: absolute; 	
+    	width: 100%;
+    	height: 100%;
+		 z-index: 1; 
+	}
+ 	</style>
+
+
+
+
+
 	<!-- Menu -->
+
+ 	<div my-map=""></div>
+
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
 	  <header class="mdl-layout__header">
 
-			<!--input -->
-			<div>
-				<section class="box-search">
-					<div class="box-search-content">
-						<input 
-							type="text" 
-							class="search-bus" 
-							placeholder="Buscar ônibus" 
-							ng-model="vm.search"
-							ng-change="vm.getLines()"
-							 />
-					</div>
-				</section>
-			</div>
-
-			<div>
-				<h6 class="title-buser">
-					<strong>Buser</strong>
-				</h6>
-
-				<div class="box-icon-user">
-					<img src="assets/images/image-user.png" alt="User Name" class="image-user-right" />
+		<div>
+			<section class="box-search">
+				<div class="box-search-content">
+					<input 
+						type="text" 
+						class="search-bus" 
+						placeholder="Buscar ônibus" 
+						ng-model="vm.search"
+						ng-change="vm.getLines()"
+						 />
 				</div>
+			</section>
+		</div>
+		
+		<div>
+			<h6 class="title-buser">
+				<strong>Buser</strong>
+			</h6>
+
+			<div class="box-icon-user">
+				<img src="assets/images/image-user.png" alt="User Name" class="image-user-right" />
 			</div>
+		</div>
 
 	  </header>
 
-	<div class="mdl-layout__drawer">
-	
-		<span class="user-image-link">
-			<img src="assets/images/image-user.png" alt="Image User" class="image-user" />
-			<a href="#" class="link-login"><strong>Faça o login</strong></a>						
-		</span>
 
-		<nav class="mdl-navigation">
-		      <a class="mdl-navigation__link" href="#">
-		      	<i class="material-icons">star</i>
-		      	<strong>Favoritos</strong>
-		      </a>
-		</nav>
-
-		<h6 class="information-buser">Informações do Buser</h6>
-
-	    <nav class="mdl-navigation">
-	      <a class="mdl-navigation__link" href="#"><i class="material-icons">settings</i> <strong>Configurações</strong></a>
-	      <a class="mdl-navigation__link" href="#"><i class="material-icons">format_quote</i> <strong>Sobre</strong></a>
-	      <a class="mdl-navigation__link" href="#"><i class="material-icons">help</i> <strong>Ajuda</strong></a>
-	      <a class="mdl-navigation__link" href="#"> <i class="material-icons">restore</i> <strong>Versão</strong></a>
-	    </nav>
-
-	  </div>
-
-		
-
+		<div class="mdl-layout__drawer">
+			<span class="user-image-link">
+				<img src="assets/images/image-user.png" alt="Image User" class="image-user" />
+				<a href="#" class="link-login"><strong>Faça o login</strong></a>						
+			</span>
+			<nav class="mdl-navigation">
+			      <a class="mdl-navigation__link" href="#">
+			      	<i class="material-icons">star</i>
+			      	<strong>Favoritos</strong>
+			      </a>
+			</nav>
+			<h6 class="information-buser">Informações do Buser</h6>
+		    <nav class="mdl-navigation">
+		      <a class="mdl-navigation__link" href="#"><i class="material-icons">settings</i> <strong>Configurações</strong></a>
+		      <a class="mdl-navigation__link" href="#"><i class="material-icons">format_quote</i> <strong>Sobre</strong></a>
+		      <a class="mdl-navigation__link" href="#"><i class="material-icons">help</i> <strong>Ajuda</strong></a>
+		      <a class="mdl-navigation__link" href="#"> <i class="material-icons">restore</i> <strong>Versão</strong></a>
+		    </nav>
+		</div>
 
 	</div>
 	<!-- Menu -->
+
+	<div style="top: 63px;position: absolute;width: 100%;background: #fff;padding: 0px 50px;">
+		<div ng-show="vm.showLines">
+			<ul class="list-bus">
+				<li ng-repeat="bus in vm.bus">
+					<a href="#" ng-click="vm.getMap(bus)">
+						<span class="ico-bus"></span>
+						<div>
+							<p>{{bus.numero}}</p>
+							<p>{{bus.ida}}</p>
+							<p>{{bus.volta}}</p>	
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 	
 	<div class="container" ui-view>
 	</div>
@@ -97,8 +122,6 @@
 
 	<!-- controller -->
 	<script src="app/controllers/home.controller.js"></script>
-	<!-- <script src="app/controllers/searchBus.controller.js"></script> -->
-	
 	
 	<!-- constants -->
 	<script src="app/constants/app.constants.js"></script>
@@ -111,6 +134,10 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
 
     <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBCnVGOgQm7z8bp9pfWZup2CRbVsSWpnU&sensor=false"></script>
+	
+	<script src="app/directives/buser.directive.js"></script>
 
 </body>
 </html>

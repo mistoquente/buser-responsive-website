@@ -11,7 +11,7 @@
 			function config($stateProvider, $urlRouterProvider) {
 
 				// setando a rota padrao
-				$urlRouterProvider.otherwise('/login');
+				//$urlRouterProvider.otherwise('/login');
 
 				$stateProvider
 					.state('layout', 
@@ -24,10 +24,17 @@
 						templateUrl : 'app/views/login.html',
 						url : '/login',
 						cache : false
-					}).state('layout.searchBus', 
+					})
+					.state('layout.searchBus', 
 					{
 						templateUrl : 'app/views/search-bus.html',
 						url : '/search-bus',
+						cache : false
+					})
+					.state('layout.line',
+					{
+						templateUrl : 'app/views/line-bus.html',
+						url : '/line-bus',
 						cache : false
 					});
 
