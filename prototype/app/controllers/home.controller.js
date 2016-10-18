@@ -1,5 +1,6 @@
 (
 	function () {
+		'use strict';
 
 		angular.module('app').controller('homeController', homeController);
 
@@ -7,7 +8,9 @@
 
  		function homeController ($scope, $state) {
  			
+			/*jshint validthis:true */
  			var vm = this;
+
  			vm.acessar = false;
  			vm.cadastrar = false;
  			vm.showLines = false;
@@ -22,16 +25,8 @@
  				vm.cadastrar = true;
  			};
 
- 			vm.login = function (email, senha) {
-
- 				emailCorrect = 'user@email.com';
- 				passwordCorrect = '123';
- 				
- 				if(email == emailCorrect && senha == passwordCorrect) {
- 					$state.go('layout.searchBus');
- 				} else {
- 					vm.messageError = true;
- 				}
+ 			vm.login = function () {
+ 				//$state.go('layout.searchBus');
  			};
 
  			vm.getLines = function () {
@@ -65,11 +60,11 @@
  				} else {
 					vm.showLines = false;
  				}
-
- 				console.log(vm.bus);
  			};
 
- 			
+ 			vm.getMap = function (bus) {
+ 				// $state.go('layout.line');
+ 			};			
 
  		}
 

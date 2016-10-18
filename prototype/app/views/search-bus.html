@@ -2,7 +2,7 @@
 	<div ng-show="vm.showLines">
 		<ul class="list-bus">
 			<li ng-repeat="bus in vm.bus">
-				<a href="#">
+				<a href="#" ng-click="vm.getMap(bus)">
 					<span class="ico-bus"></span>
 					<div>
 						<p>{{bus.numero}}</p>
