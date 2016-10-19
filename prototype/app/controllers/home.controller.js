@@ -12,10 +12,19 @@
  			var vm = this;
 
  			vm.bgOpacity = true;
- 			vm.boxModal = true;
+ 			vm.boxLogin = true;
  			vm.acessar = false;
  			vm.cadastrar = false;
  			vm.showLines = false;
+
+ 			vm.user = {
+ 				'email': 'Faca o login',
+ 				'image': 'assets/images/avatar-user.png'
+ 			}
+
+ 			
+
+ 			console.log(vm.user);
  			
  			vm.viewBoxAcessar = function () {
  				vm.acessar = true;
@@ -28,12 +37,17 @@
  			};
 
  			vm.login = function () {
- 				vm.boxModal = false;
+ 				vm.boxLogin = false;
+ 				vm.user = {
+	 				'email': 'guima@guima.com',
+	 				'image': 'assets/images/image-user.png'
+ 				}	
  			};
 
  			vm.getLines = function () {
  				if (vm.search.length > 3) {
 
+ 					vm.boxLogin = false;
  					vm.showLines = true;
  					vm.bus = [];
 
@@ -61,19 +75,16 @@
  					
  				} else {
 					vm.showLines = false;
+					vm.boxLogin = true;
  				}
  			};
 
  			vm.getMap = function (bus) {
  				vm.bgOpacity = false;
  				vm.showLines = false;
- 				// $state.go('layout.line');
  			};			
 
  		}
 
 	}
 )();
-
-
-

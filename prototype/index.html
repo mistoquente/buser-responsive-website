@@ -28,57 +28,8 @@
 
 	<div my-map=""></div>
 
-	<!-- header -->
-	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-		<header class="mdl-layout__header">
-			<div>
-				<section class="box-search">
-					<div class="box-search-content">
-						<input 
-							type="text" 
-							class="search-bus" 
-							placeholder="Buscar ônibus" 
-							ng-model="vm.search"
-							ng-change="vm.getLines()"
-							 />
-					</div>
-				</section>
-			</div>
-			<div>
-				<h6 class="title-buser">
-					<strong>Buser</strong>
-				</h6>
-
-				<div class="box-icon-user">
-					<img src="assets/images/image-user.png" alt="User Name" class="image-user-right" />
-				</div>
-			</div>
-		</header>
-		<div class="mdl-layout__drawer">
-			<span class="user-image-link">
-				<img src="assets/images/image-user.png" alt="Image User" class="image-user" />
-				<a href="#" class="link-login"><strong>Faça o login</strong></a>						
-			</span>
-			<nav class="mdl-navigation">
-			      <a class="mdl-navigation__link" href="#">
-			      	<i class="material-icons">star</i>
-			      	<strong>Favoritos</strong>
-			      </a>
-			</nav>
-			<h6 class="information-buser">Informações do Buser</h6>
-		    <nav class="mdl-navigation">
-		      <a class="mdl-navigation__link" href="#"><i class="material-icons">settings</i> <strong>Configurações</strong></a>
-		      <a class="mdl-navigation__link" href="#"><i class="material-icons">format_quote</i> <strong>Sobre</strong></a>
-		      <a class="mdl-navigation__link" href="#"><i class="material-icons">help</i> <strong>Ajuda</strong></a>
-		      <a class="mdl-navigation__link" href="#"> <i class="material-icons">restore</i> <strong>Versão</strong></a>
-		    </nav>
-		</div>
-	</div>
-	<!-- header -->
-	
-
 	<!-- login -->
-	<div class="m-modal" ng-show="vm.boxModal">
+	<div class="m-modal" ng-show="vm.boxLogin">
 		<div class="table">
 			<div class="tr">
 			    <div class="td">
@@ -167,6 +118,57 @@
 		</div>
 	</div>
 	<!-- login -->
+
+	<!-- header -->
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<header class="mdl-layout__header">
+			<div>
+				<section class="box-search">
+					<div class="box-search-content">
+						<input 
+							type="text" 
+							class="search-bus" 
+							placeholder="Buscar ônibus" 
+							ng-model="vm.search"
+							ng-change="vm.getLines()"
+							 />
+					</div>
+				</section>
+			</div>
+			<div>
+				<h6 class="title-buser">
+					<strong>Buser</strong>
+				</h6>
+
+				<div class="box-icon-user">
+					<img ng-src="{{vm.user.image}}" alt="User Name" class="image-user-right" />
+				</div>
+			</div>
+		</header>
+		<div class="mdl-layout__drawer">
+			<span class="user-image-link">
+				<img ng-src="{{vm.user.image}}" alt="Image User" class="image-user" />
+				<a href="#" class="link-login"><strong>{{vm.user.email}}</strong></a>	
+			</span>
+			<nav class="mdl-navigation">
+			      <a class="mdl-navigation__link" href="#">
+			      	<i class="material-icons">star</i>
+			      	<strong>Favoritos</strong>
+			      </a>
+			</nav>
+			<h6 class="information-buser">Informações do Buser</h6>
+		    <nav class="mdl-navigation">
+		      <a class="mdl-navigation__link" href="#"><i class="material-icons">settings</i> <strong>Configurações</strong></a>
+		      <a class="mdl-navigation__link" href="#"><i class="material-icons">format_quote</i> <strong>Sobre</strong></a>
+		      <a class="mdl-navigation__link" href="#"><i class="material-icons">help</i> <strong>Ajuda</strong></a>
+		      <a class="mdl-navigation__link" href="#"> <i class="material-icons">restore</i> <strong>Versão</strong></a>
+		    </nav>
+		</div>
+	</div>
+	<!-- header -->
+	
+
+	
 
 	<!-- list bus -->
 	<div style="top: 63px;position: absolute;width: 100%;background: #fff;padding: 0px 50px; z-index: 2">
