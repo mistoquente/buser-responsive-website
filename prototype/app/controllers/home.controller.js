@@ -4,13 +4,15 @@
 
 		angular.module('app').controller('homeController', homeController);
 
- 		homeController.$inject = ['$scope', '$state'];
+ 		homeController.$inject = ['$scope'];
 
- 		function homeController ($scope, $state) {
+ 		function homeController ($scope) {
  			
 			/*jshint validthis:true */
  			var vm = this;
 
+ 			vm.bgOpacity = true;
+ 			vm.boxModal = true;
  			vm.acessar = false;
  			vm.cadastrar = false;
  			vm.showLines = false;
@@ -26,7 +28,7 @@
  			};
 
  			vm.login = function () {
- 				//$state.go('layout.searchBus');
+ 				vm.boxModal = false;
  			};
 
  			vm.getLines = function () {
@@ -63,6 +65,8 @@
  			};
 
  			vm.getMap = function (bus) {
+ 				vm.bgOpacity = false;
+ 				vm.showLines = false;
  				// $state.go('layout.line');
  			};			
 
