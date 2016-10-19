@@ -123,7 +123,7 @@
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 		<header class="mdl-layout__header">
 			<div>
-				<section class="box-search">
+				<section class="box-search" ng-show="vm.boxSearch">
 					<div class="box-search-content">
 						<input 
 							type="text" 
@@ -140,7 +140,8 @@
 					<strong>Buser</strong>
 				</h6>
 
-				<div class="box-icon-user">
+				<div class="box-icon-user" ng-style="{'border-left': vm.borderIconUser()}">
+				
 					<img ng-src="{{vm.user.image}}" alt="User Name" class="image-user-right" />
 				</div>
 			</div>

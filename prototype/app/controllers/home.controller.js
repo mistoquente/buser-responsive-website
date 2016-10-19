@@ -16,15 +16,16 @@
  			vm.acessar = false;
  			vm.cadastrar = false;
  			vm.showLines = false;
+ 			vm.boxSearch = false;
+
+ 			vm.borderIconUser = function () {
+ 				return '';
+ 			}
 
  			vm.user = {
  				'email': 'Faca o login',
  				'image': 'assets/images/avatar-user.png'
  			}
-
- 			
-
- 			console.log(vm.user);
  			
  			vm.viewBoxAcessar = function () {
  				vm.acessar = true;
@@ -38,6 +39,10 @@
 
  			vm.login = function () {
  				vm.boxLogin = false;
+ 				vm.boxSearch = true;
+ 				vm.borderIconUser = function () {
+	 				return '1px #ccc solid';
+	 			}
  				vm.user = {
 	 				'email': 'guima@guima.com',
 	 				'image': 'assets/images/image-user.png'
