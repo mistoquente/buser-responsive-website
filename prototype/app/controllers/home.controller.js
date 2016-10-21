@@ -18,6 +18,7 @@
  			vm.showLines = false;
  			vm.boxSearch = false;
  			vm.showFavorite = false;
+ 			vm.showFavoriteMenu = false;
  			
 
  			vm.borderIconUser = function () {
@@ -42,6 +43,7 @@
  			vm.login = function () {
  				vm.boxLogin = false;
  				vm.boxSearch = true;
+ 				vm.showFavoriteMenu = true;
 
  				vm.borderIconUser = function () {
 	 				return '1px #ccc solid';
@@ -50,7 +52,7 @@
  				vm.user = {
 	 				'email': 'guima@guima.com',
 	 				'image': 'assets/images/image-user.png'
- 				}	
+ 				}
  			};
 
  			vm.getLines = function () {
@@ -83,6 +85,7 @@
 					});
  					
  				} else {
+ 					vm.bgOpacity = true;
 					vm.showLines = false;
 					vm.boxLogin = true;
  				}
@@ -95,6 +98,8 @@
  			};
 
  			vm.favorite = function () {
+ 				vm.boxLogin = false;
+ 				vm.bgOpacity = true;
  				vm.favoriteBus = [];
 				vm.favoriteBus.push({
 					'numero': '7272-10',
