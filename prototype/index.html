@@ -127,7 +127,7 @@
 					<div class="box-search-content">
 						<input 
 							type="text" 
-							class="search-bus" 
+							class="search-bus"
 							placeholder="Buscar ônibus" 
 							ng-model="vm.search"
 							ng-change="vm.getLines()"
@@ -152,7 +152,7 @@
 				<a href="#" class="link-login"><strong>{{vm.user.email}}</strong></a>	
 			</span>
 			<nav class="mdl-navigation">
-			      <a class="mdl-navigation__link" href="#">
+			      <a class="mdl-navigation__link" href="#" ng-click="vm.favorite()">
 			      	<i class="material-icons">star</i>
 			      	<strong>Favoritos</strong>
 			      </a>
@@ -189,6 +189,25 @@
 		</div>
 	</div>
 	<!-- list bus -->
+
+	<!-- list favorite -->
+	<div style="top: 63px;position: absolute;width: 100%;background: #fff;padding: 0px 50px; z-index: 2">
+		<div ng-show="vm.showFavorite">
+			<ul class="list-bus">
+				<li ng-repeat="favoriteBus in vm.favoriteBus">
+					<a href="#" ng-click="vm.getMap(favoriteBus)">
+						<span class="ico-bus"></span>
+						<div>
+							<p>{{favoriteBus.numero}}</p>
+							<p>{{favoriteBus.ida}}</p>
+							<p>{{favoriteBus.volta}}</p>	
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- list favorite -->
 	
 	
 

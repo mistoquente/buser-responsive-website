@@ -17,6 +17,8 @@
  			vm.cadastrar = false;
  			vm.showLines = false;
  			vm.boxSearch = false;
+ 			vm.showFavorite = false;
+ 			
 
  			vm.borderIconUser = function () {
  				return '';
@@ -40,9 +42,11 @@
  			vm.login = function () {
  				vm.boxLogin = false;
  				vm.boxSearch = true;
+
  				vm.borderIconUser = function () {
 	 				return '1px #ccc solid';
 	 			}
+
  				vm.user = {
 	 				'email': 'guima@guima.com',
 	 				'image': 'assets/images/image-user.png'
@@ -87,7 +91,45 @@
  			vm.getMap = function (bus) {
  				vm.bgOpacity = false;
  				vm.showLines = false;
- 			};			
+ 				vm.showFavorite = false;
+ 			};
+
+ 			vm.favorite = function () {
+ 				vm.favoriteBus = [];
+				vm.favoriteBus.push({
+					'numero': '7272-10',
+					'ida': 'Mercado da Lapa',
+					'volta': 'Pca Ramos de Azevedo'
+					}, {
+						'numero': '7272-11',
+						'ida': 'Mercado da Lapa',
+						'volta': 'Vila Cesamo'
+					}, {
+						'numero': '7272-12',
+						'ida': 'Mercado da Lapa',
+						'volta': 'Terminal Vila Nova Cachoeirinha'
+					}, {
+						'numero': '7272-12',
+						'ida': 'Mercado da Lapa',
+						'volta': 'Terminal Vila Nova Cachoeirinha'
+					}, {
+						'numero': '7272-12',
+						'ida': 'Mercado da Lapa',
+						'volta': 'Terminal Vila Nova Cachoeirinha'
+					}
+				);
+
+				var drawer = angular.element(document.querySelector('.mdl-layout__drawer'));
+				var obfuscator = angular.element(document.querySelector('.mdl-layout__obfuscator'));
+				
+                if(drawer && obfuscator) {
+                    drawer.toggleClass('is-visible');
+                    obfuscator.toggleClass('is-visible');
+                }
+ 				
+ 				vm.showFavorite = true;
+ 				
+ 			};
 
  		}
 
