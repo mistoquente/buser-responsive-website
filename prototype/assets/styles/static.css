@@ -87,7 +87,7 @@ div.td {
     width: 100%;
     display: block;
     border-bottom: 3px transparent solid;
-    font-size: 1.6em;
+    font-size: 1.2em;
     text-transform: uppercase;
     padding: .5em 0;
     transition: .2s border linear;
@@ -221,7 +221,6 @@ div.td {
     margin-right: 25px;
     float: right;
     margin-top: 17px;
-    border-left: 1px #ccc solid;
     z-index: 6;
     position: relative;
     padding-left: 16px;

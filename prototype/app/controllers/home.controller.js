@@ -1,16 +1,34 @@
 (
 	function () {
+		'use strict';
 
 		angular.module('app').controller('homeController', homeController);
 
- 		homeController.$inject = ['$scope', '$state'];
+ 		homeController.$inject = ['$scope'];
 
- 		function homeController ($scope, $state) {
+ 		function homeController ($scope) {
  			
+			/*jshint validthis:true */
  			var vm = this;
+
+ 			vm.bgOpacity = true;
+ 			vm.boxLogin = true;
  			vm.acessar = false;
  			vm.cadastrar = false;
  			vm.showLines = false;
+ 			vm.boxSearch = false;
+ 			vm.showFavorite = false;
+ 			vm.showFavoriteMenu = false;
+ 			
+
+ 			vm.borderIconUser = function () {
+ 				return '';
+ 			}
+
+ 			vm.user = {
+ 				'email': 'Faca o login',
+ 				'image': 'assets/images/avatar-user.png'
+ 			}
  			
  			vm.viewBoxAcessar = function () {
  				vm.acessar = true;
@@ -22,21 +40,25 @@
  				vm.cadastrar = true;
  			};
 
- 			vm.login = function (email, senha) {
+ 			vm.login = function () {
+ 				vm.boxLogin = false;
+ 				vm.boxSearch = true;
+ 				vm.showFavoriteMenu = true;
 
- 				emailCorrect = 'user@email.com';
- 				passwordCorrect = '123';
- 				
- 				if(email == emailCorrect && senha == passwordCorrect) {
- 					$state.go('layout.searchBus');
- 				} else {
- 					vm.messageError = true;
+ 				vm.borderIconUser = function () {
+	 				return '1px #ccc solid';
+	 			}
+
+ 				vm.user = {
+	 				'email': 'guima@guima.com',
+	 				'image': 'assets/images/image-user.png'
  				}
  			};
 
  			vm.getLines = function () {
  				if (vm.search.length > 3) {
 
+ 					vm.boxLogin = false;
  					vm.showLines = true;
  					vm.bus = [];
 
@@ -63,18 +85,58 @@
 					});
  					
  				} else {
+ 					vm.bgOpacity = true;
 					vm.showLines = false;
+					vm.boxLogin = true;
  				}
-
- 				console.log(vm.bus);
  			};
 
- 			
+ 			vm.getMap = function (bus) {
+ 				vm.bgOpacity = false;
+ 				vm.showLines = false;
+ 				vm.showFavorite = false;
+ 			};
+
+ 			vm.favorite = function () {
+ 				vm.boxLogin = false;
+ 				vm.bgOpacity = true;
+ 				vm.favoriteBus = [];
+				vm.favoriteBus.push({
+					'numero': '7272-10',
+					'ida': 'Mercado da Lapa',
+					'volta': 'Pca Ramos de Azevedo'
+					}, {
+						'numero': '7272-11',
+						'ida': 'Mercado da Lapa',
+						'volta': 'Vila Cesamo'
+					}, {
+						'numero': '7272-12',
+						'ida': 'Mercado da Lapa',
+						'volta': 'Terminal Vila Nova Cachoeirinha'
+					}, {
+						'numero': '7272-12',
+						'ida': 'Mercado da Lapa',
+						'volta': 'Terminal Vila Nova Cachoeirinha'
+					}, {
+						'numero': '7272-12',
+						'ida': 'Mercado da Lapa',
+						'volta': 'Terminal Vila Nova Cachoeirinha'
+					}
+				);
+
+				var drawer = angular.element(document.querySelector('.mdl-layout__drawer'));
+				var obfuscator = angular.element(document.querySelector('.mdl-layout__obfuscator'));
+				
+                if(drawer && obfuscator) {
+                    drawer.toggleClass('is-visible');
+                    obfuscator.toggleClass('is-visible');
+                }
+ 				
+ 				vm.showFavorite = true;
+ 				
+ 			};
 
  		}
 
 	}
 )();
-
-
-
