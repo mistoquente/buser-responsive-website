@@ -19,6 +19,7 @@
  			vm.boxSearch = false;
  			vm.showFavorite = false;
  			vm.showFavoriteMenu = false;
+ 			vm.favoriteBus = [];
  			
 
  			vm.borderIconUser = function () {
@@ -63,9 +64,9 @@
  					vm.bus = [];
 
  					vm.bus.push({
-					'numero': '7272-10',
-					'ida': 'Mercado da Lapa',
-					'volta': 'Pca Ramos de Azevedo'
+					'numero': '8018-10',
+					'ida': 'Metro Butanta',
+					'volta': 'Vila Sonia'
 					}, {
 						'numero': '7272-11',
 						'ida': 'Mercado da Lapa',
@@ -100,7 +101,6 @@
  			vm.favorite = function () {
  				vm.boxLogin = false;
  				vm.bgOpacity = true;
- 				vm.favoriteBus = [];
 				vm.favoriteBus.push({
 					'numero': '7272-10',
 					'ida': 'Mercado da Lapa',
@@ -132,8 +132,15 @@
                     obfuscator.toggleClass('is-visible');
                 }
  				
- 				vm.showFavorite = true;
- 				
+ 				vm.showFavorite = true; 				
+ 			};
+
+ 			vm.addFavorite = function (favorite) {
+ 				vm.favoriteBus.push({
+					'numero': favorite.numero,
+					'ida': favorite.ida,
+					'volta': favorite.volta
+				});
  			};
 
  		}

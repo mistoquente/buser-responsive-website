@@ -242,6 +242,7 @@ div.td {
     display: table;
     padding: 10px 30px;
     width: 100%;
+    position: relative;
 }
 
 .list-bus li:hover{
@@ -261,6 +262,13 @@ div.td {
     margin-bottom: 0;
 }
 /* search */
+
+.list-bus li .add-favorite {
+    position: absolute;
+    right: 35px;
+    width: initial;
+    top: 37px;
+}
 
 
 @media (max-width: 480px) {
