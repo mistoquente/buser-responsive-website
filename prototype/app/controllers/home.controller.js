@@ -19,6 +19,7 @@
  			vm.boxSearch = false;
  			vm.showFavorite = false;
  			vm.showFavoriteMenu = false;
+ 			vm.bgLoading = false;
  			vm.favoriteBus = [
  				{
 				'numero': '7272-10',
