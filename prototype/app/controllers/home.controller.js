@@ -19,8 +19,29 @@
  			vm.boxSearch = false;
  			vm.showFavorite = false;
  			vm.showFavoriteMenu = false;
- 			vm.favoriteBus = [];
- 			
+ 			vm.favoriteBus = [
+ 				{
+				'numero': '7272-10',
+				'ida': 'Mercado da Lapa',
+				'volta': 'Pca Ramos de Azevedo'
+				}, {
+					'numero': '7272-11',
+					'ida': 'Mercado da Lapa',
+					'volta': 'Vila Cesamo'
+				}, {
+					'numero': '7272-12',
+					'ida': 'Mercado da Lapa',
+					'volta': 'Terminal Vila Nova Cachoeirinha'
+				}, {
+					'numero': '7272-12',
+					'ida': 'Mercado da Lapa',
+					'volta': 'Terminal Vila Nova Cachoeirinha'
+				}, {
+					'numero': '7272-12',
+					'ida': 'Mercado da Lapa',
+					'volta': 'Terminal Vila Nova Cachoeirinha'
+				}
+			];
 
  			vm.borderIconUser = function () {
  				return '';
@@ -101,28 +122,9 @@
  			vm.favorite = function () {
  				vm.boxLogin = false;
  				vm.bgOpacity = true;
-				vm.favoriteBus.push({
-					'numero': '7272-10',
-					'ida': 'Mercado da Lapa',
-					'volta': 'Pca Ramos de Azevedo'
-					}, {
-						'numero': '7272-11',
-						'ida': 'Mercado da Lapa',
-						'volta': 'Vila Cesamo'
-					}, {
-						'numero': '7272-12',
-						'ida': 'Mercado da Lapa',
-						'volta': 'Terminal Vila Nova Cachoeirinha'
-					}, {
-						'numero': '7272-12',
-						'ida': 'Mercado da Lapa',
-						'volta': 'Terminal Vila Nova Cachoeirinha'
-					}, {
-						'numero': '7272-12',
-						'ida': 'Mercado da Lapa',
-						'volta': 'Terminal Vila Nova Cachoeirinha'
-					}
-				);
+				
+					console.log(vm.favoriteBus);
+				
 
 				var drawer = angular.element(document.querySelector('.mdl-layout__drawer'));
 				var obfuscator = angular.element(document.querySelector('.mdl-layout__obfuscator'));
@@ -142,6 +144,12 @@
 					'volta': favorite.volta
 				});
  			};
+
+ 			vm.removeFavorite = function(favorite) { 
+			  var index = vm.favoriteBus.indexOf(favorite);
+			  vm.favoriteBus.splice(index, 1);
+			  console.log(vm.favoriteBus);
+			};
 
  		}
 
