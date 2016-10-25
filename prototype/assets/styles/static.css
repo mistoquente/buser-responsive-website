@@ -263,13 +263,29 @@ div.td {
 }
 /* search */
 
-.list-bus li .add-favorite {
+.list-bus li .button-bus {
     position: absolute;
     right: 35px;
     width: initial;
     top: 37px;
 }
-
+.list-bus li .add-favorite {
+    background: url(../images/icon-favorite.png);
+    width: 10px;
+    height: 10px;
+    background-size: cover;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+}
+.list-bus li .remove-favorite {
+    background: url(../images/icon-favorite.png);
+    width: 10px;
+    height: 10px;
+    background-size: cover;
+}
 
 @media (max-width: 480px) {
 	body {
