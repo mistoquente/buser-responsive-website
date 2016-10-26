@@ -105,7 +105,7 @@
 			                    </div>
 
 			                    <div class="box-buttons">
-			                        <button class="button-form">Cancelar</button> <button class="button-form">Cadastrar</button>
+			                        <button class="button-form">Cancelar</button> <button class="button-form" ng-click="vm.login()">Cadastrar</button>
 			                    </div>
 			                </form>                        
 			            </div>
@@ -167,9 +167,6 @@
 		</div>
 	</div>
 	<!-- header -->
-	
-
-	
 
 	<!-- list bus -->
 	<div style="top: 63px;position: absolute;width: 100%;background: #fff;padding: 0px 50px; z-index: 2">
@@ -184,6 +181,10 @@
 							<p>{{bus.volta}}</p>	
 						</div>
 					</a>
+					<a href="#" 
+						title="Adicionar para favoritos" 
+						class="button-bus add-favorite"
+						ng-click="vm.addFavorite(bus)"></a>
 				</li>
 			</ul>
 		</div>
@@ -203,12 +204,29 @@
 							<p>{{favoriteBus.volta}}</p>	
 						</div>
 					</a>
+					<a href="#" 
+						title="Adicionar para favoritos" 
+						class="button-bus remove-favorite"
+						ng-click="vm.removeFavorite(favoriteBus)"></a>
 				</li>
 			</ul>
 		</div>
 	</div>
 	<!-- list favorite -->
-	
+
+	<!-- bus loading -->
+	<div class="m-modal bg-loading" ng-show="vm.bgLoading">
+		<div class="table">
+			<div class="tr">
+			    <div class="td">
+			        <div class="modal-content">
+					<img src="assets/images/bus_loading.gif" alt="">
+			        </div>
+			    </div>
+			</div>
+		</div>
+	</div>
+	<!-- bus loading -->
 	
 
 	<!-- AngularJS -->	

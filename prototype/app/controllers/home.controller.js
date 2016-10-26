@@ -19,7 +19,30 @@
  			vm.boxSearch = false;
  			vm.showFavorite = false;
  			vm.showFavoriteMenu = false;
- 			
+ 			vm.bgLoading = false;
+ 			vm.favoriteBus = [
+ 				{
+				'numero': '7272-10',
+				'ida': 'Mercado da Lapa',
+				'volta': 'Pca Ramos de Azevedo'
+				}, {
+					'numero': '7272-11',
+					'ida': 'Mercado da Lapa',
+					'volta': 'Vila Cesamo'
+				}, {
+					'numero': '7272-12',
+					'ida': 'Mercado da Lapa',
+					'volta': 'Terminal Vila Nova Cachoeirinha'
+				}, {
+					'numero': '7272-12',
+					'ida': 'Mercado da Lapa',
+					'volta': 'Terminal Vila Nova Cachoeirinha'
+				}, {
+					'numero': '7272-12',
+					'ida': 'Mercado da Lapa',
+					'volta': 'Terminal Vila Nova Cachoeirinha'
+				}
+			];
 
  			vm.borderIconUser = function () {
  				return '';
@@ -63,9 +86,9 @@
  					vm.bus = [];
 
  					vm.bus.push({
-					'numero': '7272-10',
-					'ida': 'Mercado da Lapa',
-					'volta': 'Pca Ramos de Azevedo'
+					'numero': '8018-10',
+					'ida': 'Metro Butanta',
+					'volta': 'Vila Sonia'
 					}, {
 						'numero': '7272-11',
 						'ida': 'Mercado da Lapa',
@@ -100,29 +123,9 @@
  			vm.favorite = function () {
  				vm.boxLogin = false;
  				vm.bgOpacity = true;
- 				vm.favoriteBus = [];
-				vm.favoriteBus.push({
-					'numero': '7272-10',
-					'ida': 'Mercado da Lapa',
-					'volta': 'Pca Ramos de Azevedo'
-					}, {
-						'numero': '7272-11',
-						'ida': 'Mercado da Lapa',
-						'volta': 'Vila Cesamo'
-					}, {
-						'numero': '7272-12',
-						'ida': 'Mercado da Lapa',
-						'volta': 'Terminal Vila Nova Cachoeirinha'
-					}, {
-						'numero': '7272-12',
-						'ida': 'Mercado da Lapa',
-						'volta': 'Terminal Vila Nova Cachoeirinha'
-					}, {
-						'numero': '7272-12',
-						'ida': 'Mercado da Lapa',
-						'volta': 'Terminal Vila Nova Cachoeirinha'
-					}
-				);
+				
+					console.log(vm.favoriteBus);
+				
 
 				var drawer = angular.element(document.querySelector('.mdl-layout__drawer'));
 				var obfuscator = angular.element(document.querySelector('.mdl-layout__obfuscator'));
@@ -132,9 +135,22 @@
                     obfuscator.toggleClass('is-visible');
                 }
  				
- 				vm.showFavorite = true;
- 				
+ 				vm.showFavorite = true; 				
  			};
+
+ 			vm.addFavorite = function (favorite) {
+ 				vm.favoriteBus.push({
+					'numero': favorite.numero,
+					'ida': favorite.ida,
+					'volta': favorite.volta
+				});
+ 			};
+
+ 			vm.removeFavorite = function(favorite) { 
+			  var index = vm.favoriteBus.indexOf(favorite);
+			  vm.favoriteBus.splice(index, 1);
+			  console.log(vm.favoriteBus);
+			};
 
  		}
 
