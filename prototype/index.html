@@ -120,8 +120,8 @@
 	<!-- login -->
 
 	<!-- header -->
-	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-		<header class="mdl-layout__header" ng-show="vm.showHeader">
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" ng-show="vm.showHeader">
+		<header class="mdl-layout__header">
 			<div>
 				<section class="box-search" ng-show="vm.boxSearch">
 					<div class="box-search-content">
@@ -169,9 +169,15 @@
 	<!-- header -->
 
 	<!-- header favorito -->
-	<div class="mdl-layout mdl-layout--fixed-header">
-		<header class="mdl-layout__header" ng-show="vm.showHeaderFavorito">
-			<p>Favorito</p>
+	<div class="mdl-layout mdl-layout--fixed-header" ng-show="vm.showHeaderFavorito">
+		<header class="mdl-layout__header">
+			<a href="#" class="link-back-favorite" ng-click="vm.backFavorite()">
+				<p class="arrow-text-favorite">
+					<span class="icon-arrow"></span>
+					<span class="text-back-favorite">Favorito</span>
+				</p>
+			</a>
+			
 		</header>
 	</div>
 	<!-- header favorito -->
@@ -200,8 +206,8 @@
 	<!-- list bus -->
 
 	<!-- list favorite -->
-	<div style="top: 63px;position: absolute;width: 100%;background: #fff;padding: 0px 50px; z-index: 2">
-		<div ng-show="vm.showFavorite">
+	<div style="top: 63px;position: absolute;width: 100%;background: #fff;padding: 0px 50px; z-index: 2" ng-show="vm.showFavorite">
+		<div>
 			<ul class="list-bus">
 				<li ng-repeat="favoriteBus in vm.favoriteBus">
 					<a href="#" ng-click="vm.getMap(favoriteBus)">

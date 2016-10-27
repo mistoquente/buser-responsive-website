@@ -58,7 +58,7 @@
  			vm.user = {
  				'email': 'Faca o login',
  				'image': 'assets/images/avatar-user.png'
- 			}
+ 			};
  			
  			vm.viewBoxAcessar = function () {
  				vm.acessar = true;
@@ -74,7 +74,6 @@
  				vm.bgLoading = true;
  				$timeout(function() {
 			        vm.bgLoading = false;
-			        console.log('passou');
 			    }, 1000);
  			};
 
@@ -90,6 +89,7 @@
  				vm.boxSearch = true;
  				vm.showFavoriteMenu = true;
 
+
  				vm.borderIconUser = function () {
 	 				return '1px #ccc solid';
 	 			}
@@ -97,10 +97,9 @@
  				vm.user = {
 	 				'email': 'guima@guima.com',
 	 				'image': 'assets/images/image-user.png'
- 				}
+ 				};
 
- 				vm.loading();
- 				
+ 				vm.loading(); 				
  			};
 
  			vm.getLines = function () {
@@ -142,10 +141,10 @@
  			};
 
  			vm.getMap = function (bus) {
- 				vm.loading();
  				vm.bgOpacity = false;
- 				vm.showLines = false;
+				vm.showLines = false;
  				vm.showFavorite = false;
+ 				vm.loading();
  			};
 
  			vm.favorite = function () {
@@ -175,10 +174,15 @@
  			};
 
  			vm.removeFavorite = function(favorite) {
- 				vm.loading();
-			  var index = vm.favoriteBus.indexOf(favorite);
-			  vm.favoriteBus.splice(index, 1);
-			  console.log(vm.favoriteBus);
+				vm.loading();
+				var index = vm.favoriteBus.indexOf(favorite);
+				vm.favoriteBus.splice(index, 1);
+			};
+
+			vm.backFavorite = () => {
+				vm.showHeaderFavorito = false;
+				vm.showHeader = true;
+				vm.showFavorite = false;
 			};
 
  		}
