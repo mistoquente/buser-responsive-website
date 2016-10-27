@@ -4,9 +4,9 @@
 
 		angular.module('app').controller('homeController', homeController);
 
- 		homeController.$inject = ['$scope'];
+ 		homeController.$inject = ['$scope', '$timeout'];
 
- 		function homeController ($scope) {
+ 		function homeController ($scope, $timeout) {
  			
 			/*jshint validthis:true */
  			var vm = this;
@@ -63,6 +63,14 @@
  				vm.cadastrar = true;
  			};
 
+ 			vm.loading = function () {
+ 				vm.bgLoading = true;
+ 				$timeout(function() {
+			        vm.bgLoading = false;
+			        console.log('passou');
+			    }, 1000);
+ 			};
+
  			vm.login = function () {
  				vm.boxLogin = false;
  				vm.boxSearch = true;
@@ -76,10 +84,15 @@
 	 				'email': 'guima@guima.com',
 	 				'image': 'assets/images/image-user.png'
  				}
+
+ 				vm.loading();
+ 				
  			};
 
  			vm.getLines = function () {
  				if (vm.search.length > 3) {
+
+ 					vm.loading();
 
  					vm.boxLogin = false;
  					vm.showLines = true;
@@ -115,6 +128,7 @@
  			};
 
  			vm.getMap = function (bus) {
+ 				vm.loading();
  				vm.bgOpacity = false;
  				vm.showLines = false;
  				vm.showFavorite = false;
@@ -139,6 +153,7 @@
  			};
 
  			vm.addFavorite = function (favorite) {
+ 				vm.loading();
  				vm.favoriteBus.push({
 					'numero': favorite.numero,
 					'ida': favorite.ida,
@@ -146,7 +161,8 @@
 				});
  			};
 
- 			vm.removeFavorite = function(favorite) { 
+ 			vm.removeFavorite = function(favorite) {
+ 				vm.loading();
 			  var index = vm.favoriteBus.indexOf(favorite);
 			  vm.favoriteBus.splice(index, 1);
 			  console.log(vm.favoriteBus);
