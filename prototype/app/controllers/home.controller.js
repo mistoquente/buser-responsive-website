@@ -79,7 +79,7 @@
  			};
 
 			vm.loadingInitial = function () {
-				vm.bgLoadingInitialPage = true;
+				
 				$timeout(function() {
 					vm.bgLoadingInitialPage = false;
 				}, 2000);
