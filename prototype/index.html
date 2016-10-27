@@ -121,7 +121,7 @@
 
 	<!-- header -->
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-		<header class="mdl-layout__header">
+		<header class="mdl-layout__header" ng-show="vm.showHeader">
 			<div>
 				<section class="box-search" ng-show="vm.boxSearch">
 					<div class="box-search-content">
@@ -167,6 +167,14 @@
 		</div>
 	</div>
 	<!-- header -->
+
+	<!-- header favorito -->
+	<div class="mdl-layout mdl-layout--fixed-header">
+		<header class="mdl-layout__header" ng-show="vm.showHeaderFavorito">
+			<p>Favorito</p>
+		</header>
+	</div>
+	<!-- header favorito -->
 
 	<!-- list bus -->
 	<div style="top: 63px;position: absolute;width: 100%;background: #fff;padding: 0px 50px; z-index: 2">
@@ -229,6 +237,22 @@
 		</div>
 	</div>
 	<!-- bus loading -->
+
+	<!-- bus loading page initial -->
+	<div class="m-modal modal-loading-initial" ng-show="vm.bgLoadingInitialPage">
+		<div class="table">
+			<div class="tr">
+			    <div class="td">
+			        <div class="modal-content content-loading">
+			        <div class="bg-loading"></div>
+					<!-- <img src="assets/images/bus_loading.gif" alt=""> -->
+					<img src="assets/images/bus-loading-2.gif" alt="">
+			        </div>
+			    </div>
+			</div>
+		</div>
+	</div>
+	<!-- bus loading page initial -->
 	
 
 	<!-- AngularJS -->	

@@ -20,6 +20,9 @@
  			vm.showFavorite = false;
  			vm.showFavoriteMenu = false;
  			vm.bgLoading = false;
+ 			vm.bgLoadingInitialPage = false;
+ 			vm.showHeader = true;
+ 			vm.showHeaderFavorito = false;
  			vm.favoriteBus = [
  				{
 				'numero': '7272-10',
@@ -43,6 +46,10 @@
 					'volta': 'Terminal Vila Nova Cachoeirinha'
 				}
 			];
+
+			angular.element(document).ready(function () {
+				vm.loadingInitial();
+			});
 
  			vm.borderIconUser = function () {
  				return '';
@@ -70,6 +77,13 @@
 			        console.log('passou');
 			    }, 1000);
  			};
+
+			vm.loadingInitial = function () {
+				vm.bgLoadingInitialPage = true;
+				$timeout(function() {
+					vm.bgLoadingInitialPage = false;
+				}, 2000);
+			};
 
  			vm.login = function () {
  				vm.boxLogin = false;
@@ -135,11 +149,10 @@
  			};
 
  			vm.favorite = function () {
+ 				vm.showHeaderFavorito = true;
+ 				vm.showHeader = false;
  				vm.boxLogin = false;
  				vm.bgOpacity = true;
-				
-					console.log(vm.favoriteBus);
-				
 
 				var drawer = angular.element(document.querySelector('.mdl-layout__drawer'));
 				var obfuscator = angular.element(document.querySelector('.mdl-layout__obfuscator'));
