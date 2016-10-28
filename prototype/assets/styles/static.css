@@ -62,7 +62,7 @@ div.td {
 .m-modal .modal-content {
     margin: 0 auto;
     max-width: 653px;
-    width: 100%;
+    width: 96%;
     position: relative;
     box-sizing: border-box;
     padding: 0 .4em;
@@ -226,7 +226,7 @@ md-input-container.md-input-focused .md-input {
 
 .box-icon-user {
     width: 4%;
-    margin-right: 25px;
+    margin-right: 40px;
     float: right;
     margin-top: 17px;
     z-index: 6;
@@ -356,4 +356,23 @@ md-input-container.md-input-focused .md-input {
         width: 25px;
         height: 25px;
     }
+
+    .list-bus li .button-bus {  
+        top: 35px;
+    }
+
+    .list-bus li .add-favorite {        
+        width: 25px;
+        height: 25px;        
+    }
+
+    .list-bus li .remove-favorite {        
+        width: 25px;
+        height: 25px;        
+    }
+    
+    .search-bus {
+        width: initial;
+    }
+
 }
