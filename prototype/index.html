@@ -152,7 +152,7 @@
 		<div class="mdl-layout__drawer">
 			<span class="user-image-link">
 				<img ng-src="{{vm.user.image}}" alt="Image User" class="image-user" />
-				<a href="#" class="link-login"><strong>{{vm.user.email}}</strong></a>	
+				<a href="#" class="link-login" ng-click="vm.openLogin()"><strong>{{vm.user.email}}</strong></a>	
 			</span>
 			<nav class="mdl-navigation">
 			      <a class="mdl-navigation__link" href="#" ng-click="vm.favorite()" ng-show="vm.showFavoriteMenu">
@@ -186,7 +186,7 @@
 	<!-- header favorito -->
 
 	<!-- list bus -->
-	<div style="top: 63px;position: absolute;width: 100%;background: #fff;padding: 0px 50px; z-index: 2">
+	<div class="box-list-bus" style="">
 		<div ng-show="vm.showLines">
 			<ul class="list-bus">
 				<li ng-repeat="bus in vm.bus">

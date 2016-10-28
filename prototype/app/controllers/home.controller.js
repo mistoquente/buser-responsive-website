@@ -57,7 +57,7 @@
 
  			vm.user = {
  				'email': 'Faca o login',
- 				'image': 'assets/images/avatar-user.png'
+ 				'image': 'assets/images/avatar-user.png' 				
  			};
  			
  			vm.viewBoxAcessar = () => {
@@ -135,10 +135,20 @@
  					
  				} else {
  					vm.bgOpacity = true;
-					vm.showLines = false;
-					vm.boxLogin = true;
+					vm.showLines = false;					
  				}
  			};
+
+ 			vm.openLogin = () => {
+ 				vm.boxLogin = true;
+ 				var drawer = angular.element(document.querySelector('.mdl-layout__drawer'));
+				var obfuscator = angular.element(document.querySelector('.mdl-layout__obfuscator'));
+
+				if(drawer && obfuscator) {
+                    drawer.toggleClass('is-visible');
+                    obfuscator.toggleClass('is-visible');
+                }
+ 			}
 
  			vm.getMap = () => {
  				vm.bgOpacity = false;
