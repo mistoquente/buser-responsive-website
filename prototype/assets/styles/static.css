@@ -109,8 +109,9 @@ div.td {
     color: #999;
     font-size: 1.6em;
 }
-.box-buttons {
-    float: right;
+
+md-input-container .md-input{
+    font-size: 1.6em;
 }
 
 .button-form {
@@ -251,6 +252,11 @@ md-input-container.md-input-focused .md-input {
     padding: 10px 30px;
     width: 100%;
     position: relative;
+}
+
+.text-big {
+    font-size: 21px;
+    font-weight: bold;
 }
 
 .list-bus li:hover{
