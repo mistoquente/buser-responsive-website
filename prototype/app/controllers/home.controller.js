@@ -23,19 +23,20 @@
  			vm.bgLoadingInitialPage = false;
  			vm.showHeader = true;
  			vm.showHeaderFavorito = false;
+ 			vm.imageLine = "line-1";
  			vm.favoriteBus = [
  				{
-				'numero': '7272-10',
-				'ida': 'Mercado da Lapa',
-				'volta': 'Pca Ramos de Azevedo'
+					'numero': '8018-10',
+					'ida': 'Metro Butanta',
+					'volta': 'Vila Sonia'
 				}, {
 					'numero': '7272-11',
 					'ida': 'Mercado da Lapa',
 					'volta': 'Vila Cesamo'
 				}, {
-					'numero': '7272-12',
-					'ida': 'Mercado da Lapa',
-					'volta': 'Terminal Vila Nova Cachoeirinha'
+					'numero': '857P-10',
+					'ida': 'Metro Paraíso',
+					'volta': 'Terminal Campo Limpo'
 				}, {
 					'numero': '7272-12',
 					'ida': 'Mercado da Lapa',
@@ -115,9 +116,9 @@
  					vm.bus = [];
 
  					vm.bus.push({
-					'numero': '8018-10',
-					'ida': 'Metro Butanta',
-					'volta': 'Vila Sonia'
+						'numero': '8018-10',
+						'ida': 'Metro Butanta',
+						'volta': 'Vila Sonia'
 					}, {
 						'numero': '7272-11',
 						'ida': 'Mercado da Lapa',
@@ -127,9 +128,9 @@
 						'ida': 'Mercado da Lapa',
 						'volta': 'Terminal Vila Nova Cachoeirinha'
 					}, {
-						'numero': '7272-12',
-						'ida': 'Mercado da Lapa',
-						'volta': 'Terminal Vila Nova Cachoeirinha'
+						'numero': '857P-10',
+						'ida': 'Metro Paraíso',
+						'volta': 'Terminal Campo Limpo'
 					}, {
 						'numero': '7272-12',
 						'ida': 'Mercado da Lapa',
@@ -154,7 +155,7 @@
  			};
 
  			vm.getMap = (bus) => {
-
+ 				console.log(bus);
  				var busClicked = bus;
  				vm.bgOpacity = false;
 				vm.showLines = false;
@@ -162,6 +163,15 @@
  				linkLogin.focus();
  				vm.loading();
  				vm.search = busClicked.numero;
+ 				if(busClicked.numero === "8018-10") {
+ 					vm.imageLine = "line-1";
+ 				}
+ 				if(busClicked.numero === "857P-10") {
+ 					vm.imageLine = "line-2";
+ 				}
+ 				if(busClicked.numero === "7272-12") {
+ 					vm.imageLine = "line-3";
+ 				} 				
  			};
 
  			vm.favorite = () => {
