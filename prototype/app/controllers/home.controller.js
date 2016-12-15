@@ -7,10 +7,8 @@
  		homeController.$inject = ['$scope', '$timeout'];
 
  		function homeController ($scope, $timeout) {
- 			
-			/*jshint validthis:true */
- 			var vm = this;
 
+  			var vm = this;
  			vm.bgOpacity = true;
  			vm.boxLogin = true;
  			vm.acessar = false;
