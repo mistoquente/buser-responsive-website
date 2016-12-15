@@ -17,7 +17,6 @@
     position: relative;
     z-index: 3;
  }
-
  .mapa-static {
  	background: url(../images/mapa.jpg);
  	position: absolute;
@@ -36,12 +35,27 @@
  	background: rgba(0,0,0,.8);	
  	z-index: 2;
  }
+ .bg-image-mapa {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+ }
+ .line-1 {
+    background: url(../images/p1.png);
+ }
+ .line-2 {
+    background: url(../images/p2.png);
+ }
+ .line-3 {
+    background: url(../images/p3.png);
+ }
  .messageError {
     color: #f00;
     padding: 1em 0em;
     font-size: 1.6em;
  }
-/*modal*/
  .m-modal {
     display: block;
     position: fixed;
@@ -72,9 +86,6 @@ div.td {
     box-sizing: border-box;
     padding: 0 .4em;
 }
-/*modal*/
-
-
 .form-signup{
 	background: #00acc2;
 	display: table;
@@ -101,24 +112,19 @@ div.td {
 	border-bottom: 3px #d1e5bf solid;
 	background: #01a4b9;
 }
-
 .form-signup form {
-	    display: table;
+    display: table;
     background: #fff;
     width: 100%;
-    padding: 2em;
-    
+    padding: 2em;    
 }
-
 .text-label {
     color: #999;
     font-size: 1.6em;
 }
-
 md-input-container .md-input{
     font-size: 1.6em;
 }
-
 .button-form {
     border: none;
     background: none;
@@ -128,82 +134,60 @@ md-input-container .md-input{
     font-weight: bold;
     margin: 0 10px;
 }
-
 .button-form:last-child {
     margin-right: 0;
 }
-
 .button-form:hover {
     text-decoration: underline;
 }
-
-/*sobrescrevendo material design*/
 .layout-row md-input-container {
     margin: 9px 0;
 }
 .mdl-layout .mdl-layout__header {
     background-color: #00acc2 !important;
 }
-
 .mdl-layout__header .mdl-layout__drawer-button {
     color: #333 !important;
     background: none;
 }
-
 .text-label {
     color: #00acc2;
 }
-
 md-input-container.md-default-theme.md-input-focused .md-input, 
 md-input-container.md-input-focused .md-input {
     border-color: #00acc2 !important;
 }
-
-/* profile */
-
 .title-buser {
     margin-left: 65px;
     line-height: 15px;
     float: left;
 }
-
 .mdl-layout--fixed-header h3 {
     text-transform: uppercase;
 }
-
 .information-buser {
     padding:  0 0 0 45px;
 }
-
 .user-image-link {
     padding: 30px 40px 0 40px;
 }
-
 .image-user{
     width: 35%;
 }
-
 .image-user-right{
     width: 35px;
     height: 35px;
 }
-
 .link-login {
     color: #757575;
     text-decoration: none;
 }
-
 .link-login:hover {    
     text-decoration: underline;
 }
-
 .box-buttons {
     float: right;
 }
-/* profile */
-
-
-/* search */
 .box-search {
     width: 100%;
     margin: 0 auto;    
@@ -211,7 +195,6 @@ md-input-container.md-input-focused .md-input {
     height: 44px;        
     top: 8px;    
 }
-
 .search-bus {
     width: 90%;
     margin-left: 55px;
@@ -222,18 +205,15 @@ md-input-container.md-input-focused .md-input {
     outline: none;
     color: #999;
 }
-
 .search-bus:focus {    
     border: none;
 }
-
 .box-search-content {
     width: 98%;
     height: 48px;
     margin: 0 auto;
     background: #fff;
 }
-
 .box-icon-user {
     width: 4%;
     margin-right: 40px;
@@ -243,7 +223,6 @@ md-input-container.md-input-focused .md-input {
     position: relative;
     padding-left: 16px;
 }
-
 .ico-bus {
     background: url(../images/bus-ico.png);
     display: block;
@@ -254,7 +233,6 @@ md-input-container.md-input-focused .md-input {
     margin-top: 12px;
     margin-right: 12px;
 }
-
 .list-bus li{
     list-style-type: none;
     display: table;
@@ -262,30 +240,24 @@ md-input-container.md-input-focused .md-input {
     width: 100%;
     position: relative;
 }
-
 .text-big {
     font-size: 21px;
     font-weight: bold;
 }
-
 .list-bus li:hover{
     background: #f2f2f2;
 }
-
 .list-bus li a{
     color: #333;
     width: 100%;
     display: inline-table;
 }
-
 .list-bus li div{
     float: left;
 }
 .list-bus li p{
     margin-bottom: 0;
 }
-/* search */
-
 .list-bus li .button-bus {
     position: absolute;
     right: 35px;
@@ -340,7 +312,6 @@ md-input-container.md-input-focused .md-input {
 .bg-loading .modal-content{
     text-align: center;
 }
-
 .modal-loading {
     background: rgba(0,0,0, .8);
 }
@@ -350,7 +321,6 @@ md-input-container.md-input-focused .md-input {
 .content-loading {
     text-align: center;
 }
-
 .box-list-bus {
     top: 63px;
     position: absolute;
@@ -359,22 +329,18 @@ md-input-container.md-input-focused .md-input {
     padding: 0px 50px;
     z-index: 2;
 }
-
 @media (max-width: 480px) {
 	body {
 	    font-size: 50%;
 	}
-
     .box-list-bus {        
         padding: 0;        
     }
-
     .list-bus li {
         padding-left: 15px;
         padding-right: 15px;
     }
 }
-
 @media (max-width: 1024px) {
     .information-buser {
         padding:  0 0 0 20px;
@@ -390,23 +356,14 @@ md-input-container.md-input-focused .md-input {
         width: 25px;
         height: 25px;
     }
-
     .list-bus li .button-bus {  
         top: 35px;
     }
-
-    /*.list-bus li .add-favorite {        
-        width: 25px;
-        height: 25px;        
-    }*/
-
     .list-bus li .remove-favorite {        
         width: 25px;
         height: 25px;        
     }
-
     .search-bus {
         width: initial;
     }
-
 }
