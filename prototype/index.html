@@ -17,11 +17,11 @@
 
 <div class="bg" ng-show="vm.bgOpacity"></div>
 
-<style> 	
-	
-</style>
+<div class="bg-image-mapa {{vm.imageLine}}">
+	<!-- <img src="assets/images/p1.png"> -->
+</div>
 
-	<div my-map=""></div>
+	<!-- <div my-map=""></div> -->
 
 	<!-- container geral -->
 	<div class="main-content">
@@ -269,16 +269,10 @@
 	<script src="assets/scripts/angular-ui-router.js"></script>
 
 	<!-- modulo principal -->
-	<script src="app/modules/app.module.js"></script>
-
-	<!-- Nosso arquivo de configuracao -->
-	<script src="app/config/app.config.js"></script>
+	<script src="app/modules/app.module.js"></script>	
 
 	<!-- controller -->
-	<script src="app/controllers/home.controller.js"></script>
-	
-	<!-- constants -->
-	<script src="app/constants/app.constants.js"></script>
+	<script src="app/controllers/home.controller.js"></script>	
     
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
